@@ -34,7 +34,7 @@ Scenario: Testando se o peso do snorlax esta certo
     And match response.name == "snorlax"
     And match response.weight == 4600
 
-Scenario: Criando User
+Scenario: criando novo usuario
     Given url url_go
     And request {name:"User","email": "user@inatel.br","gender":"male","status":"active"}
     And header Authorization = "Bearer 88c40e7f7c09280cbbed8e010ba5fb7b71ec4c9ae553ba6a0b3bf64a620c7223"
