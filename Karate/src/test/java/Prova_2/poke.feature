@@ -2,7 +2,7 @@ Feature: Testando API PokeAPI
 
 Background: Executa antes de cada teste.
     * def url_base = "https://pokeapi.co/api/v2/"
-    * def url_go = "https://gorest.co.in/public/v2/"
+    * def url_go = "https://gorest.co.in/public/v2/users/"
 
 Scenario: Testando se o pokemon com ID 1 é o bulbasaur
     Given url url_base
@@ -36,7 +36,6 @@ Scenario: Testando se o peso do snorlax esta certo
 
 Scenario: Criando User
     Given url url_go
-    And path "users/"
     And request {name:"User","email": "user@inatel.br","gender":"male","status":"active"}
     And header Authorization = "Bearer 88c40e7f7c09280cbbed8e010ba5fb7b71ec4c9ae553ba6a0b3bf64a620c7223"
     When method post
